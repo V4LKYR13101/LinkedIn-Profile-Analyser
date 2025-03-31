@@ -4,11 +4,11 @@ A Chrome extension that enhances LinkedIn profile viewing by integrating with Go
 
 ## Features
 
-- Floating action button appearing on LinkedIn profile pages (bottom right)
+- Sidebar interface
 - Extracts profile content from active LinkedIn profile
 - Sends profile content to Google AI models for analysis
 - Support for multiple models including "gemini-2.0-flash", "gemini-2.5-pro-exp-03-25", and "gemma-3-27b-it"
-- Interactive Q&A interface to ask questions about the profile
+- Store questions and select from stored questionos to view outcomes
 - Visual indicator showing which model is currently selected
 
 ## Installation
@@ -43,9 +43,9 @@ A Chrome extension that enhances LinkedIn profile viewing by integrating with Go
 3. Click "Save Settings"
    - You can get a Google AI API key from [Google AI](https://ai.google.dev/)
 4. Visit any LinkedIn profile page
-5. Click the floating question mark button that appears in the bottom right
-6. Use "Analyze Profile" for instant insights about the profile
-7. Ask specific questions about the profile using the Q&A interface
+5. If for some reason the sidebar does not automatically extend, click ont the blue puzzle piece to expand it mamually
+6. Click "Custom Questions", Add some questions, in some instance a LinkedIn profile refresh is needed for the newly added questions to display
+7. While on a LinkedIn profile, and this component's side panel is expanded, one will be able to run custom save questions.
 
 ## Model Selection
 
@@ -58,7 +58,7 @@ The extension supports the following models:
 
 This extension:
 - Only activates on LinkedIn profile pages
-- Only extracts profile information when you click "Analyze" or ask a question
+- Only extracts profile information onve clicking on a custom question
 - All data is sent directly to the Google AI API and is not stored elsewhere
 - Your API key and model preference are stored locally in your browser using Chrome's storage API
 - No data is collected or shared with any third parties
