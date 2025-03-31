@@ -1,0 +1,393 @@
+/* LinkedIn Enhancer with Gemma 3 - Main Styles */
+
+/* Floating Button */
+.gemma-floating-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #0A66C2;
+  color: white;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s, transform 0.2s;
+  animation: gemma-pulse 2s infinite;
+}
+
+@keyframes gemma-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(10, 102, 194, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(10, 102, 194, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(10, 102, 194, 0);
+  }
+}
+
+.gemma-floating-btn:hover {
+  background-color: #084e96;
+  transform: scale(1.05);
+}
+
+.gemma-floating-btn.gemma-btn-active {
+  background-color: #191919;
+}
+
+/* Panel */
+.gemma-panel {
+  position: fixed;
+  bottom: 90px;
+  right: 30px;
+  width: 380px;
+  max-height: 500px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 9998;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.gemma-panel-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.gemma-panel-header {
+  padding: 16px;
+  background-color: #F3F2EF;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gemma-panel-header h3 {
+  margin: 0;
+  color: #191919;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.gemma-model-badge {
+  background-color: #0a66c2;
+  color: white;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.gemma-panel-content {
+  padding: 16px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+/* API Warning */
+.gemma-api-warning {
+  background-color: #fef2f2;
+  color: #b91c1c;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 1.4;
+  border: 1px solid rgba(185, 28, 28, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gemma-api-warning svg {
+  flex-shrink: 0;
+  color: #b91c1c;
+}
+
+.gemma-api-warning a {
+  color: #0A66C2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.gemma-api-warning a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+.gemma-section {
+  margin-bottom: 24px;
+}
+
+.gemma-section h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #191919;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Buttons */
+.gemma-btn {
+  padding: 8px 16px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+.gemma-primary-btn {
+  background-color: #0A66C2;
+  color: white;
+}
+
+.gemma-primary-btn:hover {
+  background-color: #084e96;
+}
+
+.gemma-primary-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Input fields */
+.gemma-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+
+.gemma-input:focus {
+  border-color: #0A66C2;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(10, 102, 194, 0.2);
+}
+
+.gemma-input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+/* Question form */
+#gemma-question-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+#gemma-question-form .gemma-input {
+  flex-grow: 1;
+  margin-bottom: 0;
+}
+
+/* Results container */
+.gemma-results-container {
+  margin-top: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.gemma-result-card {
+  background-color: #F3F2EF;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.gemma-question {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #0A66C2;
+}
+
+.gemma-answer {
+  white-space: pre-line;
+}
+
+.gemma-answer p {
+  margin: 0 0 12px 0;
+}
+
+.gemma-answer ul {
+  margin: 0 0 12px 0;
+  padding-left: 20px;
+}
+
+.gemma-answer li {
+  margin-bottom: 4px;
+}
+
+/* Loading indicator */
+.gemma-loading-indicator {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.gemma-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(10, 102, 194, 0.3);
+  border-radius: 50%;
+  border-top-color: #0A66C2;
+  margin-right: 8px;
+  animation: gemma-spin 1s cubic-bezier(0.55, 0.15, 0.45, 0.85) infinite;
+}
+
+@keyframes gemma-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error message */
+.gemma-error {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  background-color: #fef2f2;
+  color: #b91c1c;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  animation: gemma-slide-up 0.3s ease;
+  border: 1px solid rgba(185, 28, 28, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.gemma-error-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1;
+}
+
+.gemma-error-icon {
+  color: #b91c1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.gemma-error-text {
+  flex: 1;
+}
+
+.gemma-error-help {
+  display: block;
+  margin-top: 6px;
+  color: #4b5563;
+  font-size: 13px;
+}
+
+.gemma-error-close {
+  background: none;
+  border: none;
+  color: #b91c1c;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  padding: 0;
+  margin-left: 10px;
+}
+
+@keyframes gemma-slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Custom Questions */
+.gemma-custom-questions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.gemma-custom-question-btn {
+  background-color: #f3f2ef;
+  color: #0A66C2;
+  border: 1px solid #dcdcdc;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.gemma-custom-question-btn:hover {
+  background-color: #e6f2ff;
+  border-color: #0A66C2;
+}
+
+.gemma-custom-question-btn:active {
+  background-color: #d1e6ff;
+}
+
+.gemma-custom-question-btn:disabled {
+  background-color: #f5f5f5;
+  color: #aaa;
+  border-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+.gemma-empty-state {
+  text-align: center;
+  color: #666;
+  padding: 16px;
+  font-size: 14px;
+}
+
+.gemma-hint {
+  font-size: 12px;
+  color: #999;
+  font-style: italic;
+  margin-top: 4px;
+}
