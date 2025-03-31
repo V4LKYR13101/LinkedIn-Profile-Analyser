@@ -7,7 +7,7 @@ A Chrome extension that enhances LinkedIn profile viewing by integrating with Go
 - Sidebar interface
 - Extracts profile content from active LinkedIn profile
 - Sends profile content to Google AI models for analysis
-- Support for multiple models including "gemini-2.0-flash", "gemini-2.5-pro-exp-03-25", and "gemma-3-27b-it"
+- Support for multiple models including "gemini-2.0-flash", and "gemma-3-27b-it"
 - Store questions and select from stored questionos to view outcomes
 - Visual indicator showing which model is currently selected
 
@@ -52,7 +52,6 @@ A Chrome extension that enhances LinkedIn profile viewing by integrating with Go
 The extension supports the following models:
 - **gemma-3-27b-it** - Gemma 3 27b instructional tuned model
 - **gemini-2.0-flash** - Fastest Gemini model for quick responses
-- **gemini-2.5-pro-exp-03-25** - Advanced experimental Gemini model
 
 ## Privacy
 
